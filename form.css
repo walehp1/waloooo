@@ -1,0 +1,42 @@
+input[type="text"], input[type="password"]{
+ border: none;
+ border-bottom: 1px solid black;
+ width: 100%;
+ padding-bottom: .5em;
+ font-size: 105%;
+}
+input[type="text"]:hover, input[type="password"]:hover{
+ border: none;
+ border-bottom: 1px solid black;
+}
+input[type=text]:focus, input[type=password]:focus {
+  border: none;
+outline: none;
+border-bottom: 1px solid #0067B8;
+ 
+}
+.create-key-field p a {
+text-decoration: none;
+font-size: 85%;
+}
+.create-key-field p a:hover {
+color: gray;
+text-decoration: underline;
+}
+.input-field-button {
+}
+input[type="submit"]{
+float: right; 
+}
+.btn {
+font-size: 105%;
+padding: .4em 2.3em;
+border: none;
+}
+.forward {
+color: white;
+background-color:#0067B8;
+}
+.backward {
+ background-color: gray;
+}
